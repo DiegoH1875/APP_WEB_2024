@@ -1,0 +1,28 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color: silver;
+    font-family: sans-serif;
+}
+
+#contenedor{
+    /*background-color: silver;*/
+    width: 70%;
+    margin:0 auto;
+    border: 1px solid black;
+}
+
+#header{
+    background-color: navy;
+    height: 100px;
+    line-height:100px;
+    text-align: center;
+    color: white;
+    border-bottom:10px solid white;
+    border-top:10px solid white;
+    border-left:10px solid white;
+    border-right:10px solid white;
+}
