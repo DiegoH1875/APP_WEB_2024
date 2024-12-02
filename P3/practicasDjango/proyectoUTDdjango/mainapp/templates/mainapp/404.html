@@ -1,0 +1,7 @@
+{% comment %}  SE DEBE HACER collectsatics antes de correr els server y poner el debug en falsepara que Django use esto{% endcomment %}
+{% block content %}
+    <script>
+        alert('Esta página no existe');
+        window.location.replace("{% url 'inicio' %}");
+    </script>
+{% endblock content %}

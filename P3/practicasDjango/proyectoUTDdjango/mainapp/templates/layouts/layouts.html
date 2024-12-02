@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}{% endblock title %}|Django Proyecto UTD
+    </title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}" type="text/css">
+</head>
+<body>
+    <header>
+        <div id="logotipo">
+            <img src="{% static "img/dj.webp" %}" alt="Imagen Django" title="Django">
+            <h1>Django Proyecto Web</h1>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{% url "index" %}" >Inicio</a></li>
+            {% if user.email %}
+            <li><a href="{% url "acercade" %}">Acerca de</a></li>
+            <li><a href="{% url "mision" %}">Mision</a></li>
+            <li><a href="{% url "vision" %}">Vision</a></li>
+            <li><a href="{% url "categorias" %}">Categorías</a></li>
+            <li><a href="{% url "articulos" %}">Artículos</a></li>
+            <li><a href="{% url "cerrar" %}">Cerrar sesión</a></li>
+            
+            {% else %}
+
+            <li><a href="{% url "iniciar" %}">Iniciar sesión</a></li>
+            <li><a href="{% url "registrar" %}">Registrarse</a></li>
+
+            {% endif %}
+        </ul>
+    </nav>
+    <section id="content">
+       <div class="box">
+            {% block content %}{% endblock content %}
+       </div>
+    </section>
+    <footer>
+        <p>Diego y Francisco &copy; 2024 | Visitado el: {% now "Y-m-d H:i" %}</p>
+    </footer>
+</body>
+</html>
