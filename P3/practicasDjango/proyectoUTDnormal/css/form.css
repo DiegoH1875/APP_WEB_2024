@@ -1,0 +1,61 @@
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+table {
+    width: 100%;
+    border-spacing: 10px;
+}
+
+
+td {
+    padding: 8px;
+}
+
+
+label {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #333;
+}
+
+
+input[type="text"], input[type="password"], input[type="submit"], input[type="reset"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilo para el input reset */
+input[type="reset"] {
+    background-color: navajowhite;
+    color: white;
+    cursor: pointer;
+}
+
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    opacity: 0.9;
+}
+
+input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
